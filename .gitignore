@@ -1,3 +1,7 @@
+Builds/*
+Library/*
+.vs/*
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
