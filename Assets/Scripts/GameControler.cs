@@ -1,5 +1,21 @@
-﻿using UnityEngine; using UnityEngine.UI;  public class GameControler : MonoBehaviour
-{     public GameObject Player;     public GameObject PickUpGroup;     public Text ScoreText;     public Text WinText;      private Transform[] PickUps;     private Rigidbody2D PlayerBody;      [HideInInspector] public int score;      private bool is_won;      private void Start()
+﻿using UnityEngine;
+ using UnityEngine.UI;  
+
+public class GameControler : MonoBehaviour
+{ 
+    public GameObject Player; 
+    public GameObject PickUpGroup; 
+    public Text ScoreText; 
+    public Text WinText;  
+
+    private Transform[] PickUps; 
+    private Rigidbody2D PlayerBody;  
+
+    [HideInInspector] public int score;  
+
+    private bool is_won;  
+
+    private void Start()
     {
         PlayerBody = Player.GetComponent<Rigidbody2D>();
         PickUps = PickUpGroup.GetComponentsInChildren<Transform>();
@@ -40,7 +56,7 @@
             is_won = false;
         }
     }
-         
+ 
     public void setCountText()
     {
         ScoreText.text = "Count: " + score.ToString();
